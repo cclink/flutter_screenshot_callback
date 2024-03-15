@@ -26,10 +26,11 @@ class ScreenshotDetector(private val context: Context,
     }
 
     private fun reportScreenshotsUpdate(uri: Uri) {
-        val screenshots: List<String> = queryScreenshots(uri)
-        if (screenshots.isNotEmpty()) {
-            callback.invoke(screenshots.last());
-        }
+//        val screenshots: List<String> = queryScreenshots(uri)
+//        if (screenshots.isNotEmpty()) {
+//            callback.invoke(screenshots.last());
+//        }
+        callback.invoke(uri.toString());
     }
 
     private fun queryScreenshots(uri: Uri): List<String> {
